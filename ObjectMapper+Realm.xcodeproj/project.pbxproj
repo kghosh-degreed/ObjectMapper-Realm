@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		234360BB2368D1110037BC92 /* ListTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207CD261F6A21550055B8FE /* ListTransform.swift */; };
-		4C9052BC3160BD17EC8B75B8 /* Pods_ObjectMapper_RealmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3377D0A229F82680A2F1C2 /* Pods_ObjectMapper_RealmTests.framework */; };
-		CF81D24DBB3918525A74969B /* Pods_ObjectMapper_Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42EAA9A6C617CE9BF1FC5125 /* Pods_ObjectMapper_Realm.framework */; };
+        D022A2CD21BAC7B400EB6858 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A2CA21BAC7B400EB6858 /* ObjectMapper.framework */; };
+		D022A2CE21BAC7B400EB6858 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A2CB21BAC7B400EB6858 /* Realm.framework */; };
+		D022A2CF21BAC7B400EB6858 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A2CC21BAC7B400EB6858 /* RealmSwift.framework */; };
 		D207CD141F6A21200055B8FE /* ObjectMapper_Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D207CD0A1F6A21200055B8FE /* ObjectMapper_Realm.framework */; };
 		D207CD291F6A21550055B8FE /* ListTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207CD261F6A21550055B8FE /* ListTransform.swift */; };
 		D207CD2A1F6A21550055B8FE /* ObjectMapper_Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = D207CD271F6A21550055B8FE /* ObjectMapper_Realm.h */; settings = {ATTRIBUTES = (Public, ); }; };
