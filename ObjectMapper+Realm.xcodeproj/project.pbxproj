@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D022A2CD21BAC7B400EB6858 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A2CA21BAC7B400EB6858 /* ObjectMapper.framework */; };
-		D022A2CE21BAC7B400EB6858 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A2CB21BAC7B400EB6858 /* Realm.framework */; };
-		D022A2CF21BAC7B400EB6858 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A2CC21BAC7B400EB6858 /* RealmSwift.framework */; };
+		234360BB2368D1110037BC92 /* ListTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207CD261F6A21550055B8FE /* ListTransform.swift */; };
+		4C9052BC3160BD17EC8B75B8 /* Pods_ObjectMapper_RealmTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E3377D0A229F82680A2F1C2 /* Pods_ObjectMapper_RealmTests.framework */; };
+		CF81D24DBB3918525A74969B /* Pods_ObjectMapper_Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42EAA9A6C617CE9BF1FC5125 /* Pods_ObjectMapper_Realm.framework */; };
 		D207CD141F6A21200055B8FE /* ObjectMapper_Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D207CD0A1F6A21200055B8FE /* ObjectMapper_Realm.framework */; };
 		D207CD291F6A21550055B8FE /* ListTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = D207CD261F6A21550055B8FE /* ListTransform.swift */; };
 		D207CD2A1F6A21550055B8FE /* ObjectMapper_Realm.h in Headers */ = {isa = PBXBuildFile; fileRef = D207CD271F6A21550055B8FE /* ObjectMapper_Realm.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -153,7 +153,6 @@
 				D207CD101F6A21200055B8FE /* Frameworks */,
 				D207CD111F6A21200055B8FE /* Resources */,
 				39D659B8D36F1BCA982DF4E9 /* [CP] Embed Pods Frameworks */,
-				A52BDE10C964DD62487CD5C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,7 +171,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Jake Peterson";
 				TargetAttributes = {
 					D207CD091F6A21200055B8FE = {
@@ -229,28 +228,38 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ObjectMapper_RealmTests/Pods-ObjectMapper_RealmTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectMapper_RealmTests/Pods-ObjectMapper_RealmTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ObjectMapper_RealmTests/Pods-ObjectMapper_RealmTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		A52BDE10C964DD62487CD5C9 /* [CP] Copy Pods Resources */ = {
+		F7096EEA0620BF9F18C5CB88 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Copy Pods Resources";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ObjectMapper_Realm-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ObjectMapper_RealmTests/Pods-ObjectMapper_RealmTests-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD6326D1D7D3F05AD12BCA96 /* [CP] Check Pods Manifest.lock */ = {
@@ -259,13 +268,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ObjectMapper_RealmTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -283,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234360BB2368D1110037BC92 /* ListTransform.swift in Sources */,
 				D207CD311F6A23590055B8FE /* User.swift in Sources */,
 				D207CD2F1F6A22CF0055B8FE /* ListTransformTests.swift in Sources */,
 			);
@@ -303,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -355,6 +369,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -365,6 +380,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -409,6 +425,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -436,7 +453,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wfio.ObjectMapper-Realm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -460,14 +477,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wfio.ObjectMapper-Realm";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		D207CD221F6A21200055B8FE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ObjectMapper+RealmTests/Info.plist";
@@ -476,14 +493,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		D207CD231F6A21200055B8FE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "ObjectMapper+RealmTests/Info.plist";
@@ -491,7 +508,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wfio.ObjectMapper-RealmTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

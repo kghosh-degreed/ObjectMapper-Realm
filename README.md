@@ -15,6 +15,8 @@ it, simply add the following line to your Podfile:
 pod "ObjectMapper+Realm"
 ```
 
+You may also install it through [Swift Package Manager](https://swift.org/package-manager/).
+
 ## Usage
 
 To use `ListTransform` just add it to the mapping of your RealmObject:
@@ -41,6 +43,25 @@ class User: Object, Mappable {
   }
 }
 ```
+
+If you need to have control over your newly serialized objects, you can use the `onSerialize` callback:
+```swift
+class User: Object, Mappable {
+
+    func mapping(map: Map) {
+        username              <- map["username"]
+        friends               <- (map["friends"], ListTransform<User>(onSerialize: onSerialize))
+    }
+
+    private func onSerialize(users: List<User>) {
+        let realm = Storage.shared.realm
+        try! realm.write {
+            realm.add(users, update: .modified)
+        }
+    }
+}
+```
+
 Have fun! 🎬
 
 ## Author
