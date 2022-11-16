@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		D04B664C26009BBE00B7EBCC /* ObjectMapper.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D04B662C25FFA2C200B7EBCC /* ObjectMapper.xcframework */; };
 		D04B664D26009BBF00B7EBCC /* ObjectMapper.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D04B662C25FFA2C200B7EBCC /* ObjectMapper.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D04B665526009C8000B7EBCC /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A2CB21BAC7B400EB6858 /* Realm.framework */; };
+		D04B665526009C8000B7EBCC /* Realm.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A2CB21BAC7B400EB6858 /* Realm.xcframework */; };
 		D04B665626009C8000B7EBCC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D022A2CC21BAC7B400EB6858 /* RealmSwift.framework */; };
 		D0DAA9ED27032B2800DF9DDD /* RealmSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0DAA9EB27032B2800DF9DDD /* RealmSwift.xcframework */; };
 		D0DAA9EE27032B2800DF9DDD /* RealmSwift.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D0DAA9EB27032B2800DF9DDD /* RealmSwift.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -50,7 +50,7 @@
 
 /* Begin PBXFileReference section */
 		D022A2CA21BAC7B400EB6858 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
-		D022A2CB21BAC7B400EB6858 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		D022A2CB21BAC7B400EB6858 /* Realm.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.xcframework; path = Carthage/Build/Realm.xcframework; sourceTree = "<group>"; };
 		D022A2CC21BAC7B400EB6858 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		D04B662C25FFA2C200B7EBCC /* ObjectMapper.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = ObjectMapper.xcframework; path = Carthage/Build/ObjectMapper.xcframework; sourceTree = "<group>"; };
 		D0DAA9EB27032B2800DF9DDD /* RealmSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RealmSwift.xcframework; path = Carthage/Build/RealmSwift.xcframework; sourceTree = "<group>"; };
@@ -80,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D04B665526009C8000B7EBCC /* Realm.framework in Frameworks */,
+				D04B665526009C8000B7EBCC /* Realm.xcframework in Frameworks */,
 				D04B665626009C8000B7EBCC /* RealmSwift.framework in Frameworks */,
 				D207CD141F6A21200055B8FE /* ObjectMapper_Realm.framework in Frameworks */,
 			);
@@ -96,7 +96,7 @@
 				D0DAA9EB27032B2800DF9DDD /* RealmSwift.xcframework */,
 				D04B662C25FFA2C200B7EBCC /* ObjectMapper.xcframework */,
 				D022A2CA21BAC7B400EB6858 /* ObjectMapper.framework */,
-				D022A2CB21BAC7B400EB6858 /* Realm.framework */,
+				D022A2CB21BAC7B400EB6858 /* Realm.xcframework */,
 				D022A2CC21BAC7B400EB6858 /* RealmSwift.framework */,
 			);
 			name = Frameworks;
